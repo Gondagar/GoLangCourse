@@ -1,4 +1,4 @@
-package lesson
+package main
 
 import "fmt"
 
@@ -55,5 +55,13 @@ func RunLesson13() {
 		fmt.Println("Runner is null")
 	}
 
-	runner.Run()
+	var unnanedRunner *Human
+	fmt.Printf("Type: %T, Value %s\n", unnanedRunner, unnanedRunner)
+
+	runner = unnanedRunner
+	fmt.Printf("Type: %T, Value %s\n", runner, runner)
+
+	namedRunner := &Human{Name: "Педро"}
+	fmt.Printf("Type: %T, Value %s\n", namedRunner, namedRunner)
+
 }
